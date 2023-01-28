@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+
+    display: grid;
+    place-items: center;
+    height: 100vh;
+
+    background: linear-gradient(45deg, #190361, #bb00ff);
+	animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+}
+
+.main,
+.fortune {
+    width: 42.8rem;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+
+    text-align: center;
+}
+
+.main {
+    padding: 4.8rem 6.4rem 6.4rem;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+
+    color: #34355B;
+}
+
+.main h1 {
+    margin-bottom: 1.4rem;
+}
+
+.main p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.5rem;
+    line-height: 2rem;
+
+    color: #34355B;
+
+    margin-bottom: 2rem;
+}
+
+button {
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+#fortune-cookie:hover {
+    animation: shake .1s infinite;
+}
+
+svg {
+    width: 30rem;
+    height: 20rem;
+}
+
+.fortune {
+    padding: 4.8rem 6.4rem;
+
+    display: grid;
+    place-items: center;
+    gap: 1.7rem;
+}
+
+.hide {
+    display: none;
+}
+
+#cookie-message {
+    background: #E4EDF1;
+    box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
+
+    width: 100%;
+    padding: 1rem;
+
+    display: grid;
+    place-items: center;
+
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+
+    color: #000000;
+
+    animation: move 3s ease;
+}
+
+#open-cookie {
+    padding: 16px;
+    width: 17.4rem;
+
+    background: #FF9500;
+    border-radius: 4px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+
+    color: #FFFFFF;
+
+    transition: background .3s;
+}
+
+#open-cookie:hover {
+    background-color: #FFA633;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes shake {
+    0% {
+        transform: translateY(2px);
+    }
+
+    25% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: translateY(-2px);
+    }
+}
+
+@keyframes move {    
+    0% {
+        transform: translateY(160px) scale(0.1);   
+    }
+
+    100% {
+        transform: scale(1);       
+    }
+}  
